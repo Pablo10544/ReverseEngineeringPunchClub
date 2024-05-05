@@ -1,2 +1,2 @@
-Projeto que permite descriptografar e modificar o arquivo de save do jogo Punch Club, tornando possível alterar o estado do jogo, os valores de moedas e habilidades no jogo. basta rodar o programa, substituir 
+Projeto que permite descriptografar e modificar o arquivo de save do jogo Punch Club que usa o algoritmo AES porém com as chaves hard-coded na applicação, ao se aplicar técnicas de engenharia reversa para se conseguir a chave se torna possível alterar o estado do jogo, os valores de moedas e habilidades no jogo. basta rodar o programa, substituir 
 o valor desejado no arquivo decryptado, rodar o programa novamente, e finalmente substituir o arquivo save.dat com o arquivo gerado.
