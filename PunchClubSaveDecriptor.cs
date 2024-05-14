@@ -20,15 +20,16 @@ UTF8Encoding encoder;
 		146, 64, 171, 161, 2, 3, 113, 119, 231, 121,
 		221, 112, 79, 32, 114, 16
 	};
-    buffer = File.ReadAllBytes(@"C:\Users\pablo\AppData\LocalLow\Lazy Bear Games\Punch Club\save_2.dat");
-    buffer2 = File.ReadAllText(@"C:\Users\pablo\Documents\pun\savaDecrypted.txt");
+    buffer = File.ReadAllBytes(@"YOUR_USER_PATH_HERE\AppData\LocalLow\Lazy Bear Games\Punch Club\save_2.dat");
+    buffer2 = File.ReadAllText(@"YOUR_INPUT_PATH\savaDecrypted.txt");
 CreateEncoders();
 #pragma warning disable 0618
- File.WriteAllText(@"C:\Users\pablo\Documents\pun\savaDecrypted.txt",GetString(Transform(buffer,decryptor)));
+//Decripta o save do jogo
+ File.WriteAllText(@"OUTPUT_PATH\savaDecrypted.txt",GetString(Transform(buffer,decryptor)));
 #pragma warning restore 0618
 
-//Console.WriteLine(buffer2);
-File.WriteAllBytes(@"C:\Users\pablo\Documents\pun\savaecrypted.txt",(Transform(GetBytes((buffer2)),encryptor)));
+//Encripta o save posto no caminho inputpath
+File.WriteAllBytes(@"OUTPUT+PATH\savaecrypted.txt",(Transform(GetBytes((buffer2)),encryptor)));
 
 
 
